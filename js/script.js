@@ -13,4 +13,16 @@ function getRandomNum() {
 
 // save the result of the function in a variable
 const randomNumResult = getRandomNum()
-console.log(randomNumResult);
+
+// empty array 
+const secretNumbers = [];
+
+// while cicle for pushing max 5 numbers into the array
+while (secretNumbers.length < 5){
+    const num = getRandomNum()
+    // IF the number in not already present, push it into the array
+    if (!secretNumbers.includes(num)){
+        secretNumbers.push(num)
+    }    
+}
+console.log(secretNumbers);

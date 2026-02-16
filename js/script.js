@@ -29,3 +29,17 @@ for (let i = 0; i < secretNumbers.length; i++){
     numberListEl.innerHTML += `<li>${secretNumbers[i]}</li>`
 }
 
+
+let time = 5;
+countDownEl.textContent = time
+
+const timer = setInterval(function(){
+    time--
+    countDownEl.textContent = time
+    if(time === 0){
+        clearInterval(timer)
+        countDownEl.classList.add('d-none')
+        numberListEl.classList.add('d-none')
+        answersFormEl.classList.remove('d-none')
+    }
+}, 1000)

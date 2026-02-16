@@ -11,9 +11,6 @@ function getRandomNum() {
     return Math.floor(Math.random() * 50) + 1;
 }
 
-// save the result of the function in a variable
-const randomNumResult = getRandomNum()
-
 // empty array 
 const secretNumbers = [];
 
@@ -26,3 +23,9 @@ while (secretNumbers.length < 5){
     }    
 }
 console.log(secretNumbers);
+
+// for cicle to display the lists of numbers in the document
+for (let i = 0; i < secretNumbers.length; i++){
+    numberListEl.innerHTML += `<li>${secretNumbers[i]}</li>`
+}
+
